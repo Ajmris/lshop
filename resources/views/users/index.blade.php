@@ -9,7 +9,6 @@
             <th scope="col">Imię</th>
             <th scope="col">Nazwisko</th>
             <th scope="col">Email</th>
-            <th scope="col">Akcje</th>
             </tr>
         </thead>
         <tbody>
