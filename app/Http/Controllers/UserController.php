@@ -19,7 +19,6 @@ class UserController extends Controller
             'users'=> User::paginate(3)
         ]);
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -27,7 +26,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -35,7 +33,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      */
@@ -43,7 +40,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -51,7 +47,6 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      */
@@ -59,12 +54,13 @@ class UserController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $flight=User::find($id);
+        $flight->delete();
+        return response()->json(['status'=>'success']);
     }
 }
